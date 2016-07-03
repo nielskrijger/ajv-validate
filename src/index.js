@@ -26,7 +26,7 @@ const ajvQuery = new Ajv(Object.assign({}, defaultOptions, {
 function formatErrors(errors, isQuery = false) {
   return _.map(errors, (error) => {
     let path = error.dataPath;
-    if (isQuery) path = '?' + path.substr(1);
+    if (isQuery && path.length > 0) path = '?' + path.substr(1);
     return {
       code: _.snakeCase(error.keyword),
       path,
