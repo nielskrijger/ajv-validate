@@ -19,7 +19,7 @@ This library manages two AJV validation instances, one for validating a request 
 
 ## addBodySchema(schema, schemaName)
 
-Adds a JSON schema to validate the message body. A schema is referenced by its name using `validator.validateBody(schemaName, body)`.
+Registers a JSON schema to validate the message body.
 
 ```js
 import { addBodySchema } from '@nielskrijger/ajv-validate';
@@ -35,7 +35,7 @@ addBodySchema({
 
 ## validateBody(schemaName, body)
 
-Validates a message body against specified schema.
+Validates a message body against specified schema. A schema is referenced by its name.
 
 ```js
 import { validateBody } from '@nielskrijger/ajv-validate';
@@ -50,7 +50,7 @@ validateBody('testBody', { name: 'test' });
 
 ## addQuerySchema(schema, schemaName)
 
-Adds a JSON schema to validate a message query. A schema is referenced by its name using `validator.validateQuery(schemaName, queryParams)`.
+Registers a JSON schema to validate query parameters.
 
 ```js
 import { addQuerySchema } from '@nielskrijger/ajv-validate';
@@ -65,7 +65,7 @@ validator.addQuerySchema({
 
 ## validateQuery(schemaName, body)
 
-Validates a message body against specified schema.
+Validates a message body against specified schema. A schema is referenced by its name.
 
 ```js
 import { validateQuery } from '@nielskrijger/ajv-validate';
