@@ -7,7 +7,7 @@ A basic wrapper for [AJV](https://github.com/epoberezkin/ajv).
 # Install
 
 ```
-$ npm install --save @nielskrijger/ajv-errors
+$ npm install --save @nielskrijger/ajv-validate
 ```
 
 # Usage
